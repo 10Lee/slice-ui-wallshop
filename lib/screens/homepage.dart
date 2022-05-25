@@ -6,7 +6,6 @@ import 'package:slicing_homepage/widgets/features.dart';
 
 import 'package:slicing_homepage/widgets/horizontal_list.dart';
 import 'package:slicing_homepage/widgets/horizontal_list2.dart';
-import 'package:slicing_homepage/widgets/horizontal_list3.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

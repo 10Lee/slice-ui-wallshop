@@ -15,7 +15,7 @@ class Features extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 170.0,
+      width: MediaQuery.of(context).size.width / 2.33,
       height: double.infinity,
       decoration: BoxDecoration(
         color: Colors.red.shade900,
