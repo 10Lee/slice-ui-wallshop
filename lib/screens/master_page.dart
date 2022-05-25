@@ -26,6 +26,7 @@ class _MasterPageState extends State<MasterPage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
+        fixedColor: Colors.red.shade900,
         onTap: (value) => setState(() => _currentIndex = value),
         items: [
           BottomNavigationBarItem(

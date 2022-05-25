@@ -83,7 +83,7 @@ class HorizontalList2 extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 10.0,
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.red.shade900,
                       child: Text(
                         '29%',
                         style:
