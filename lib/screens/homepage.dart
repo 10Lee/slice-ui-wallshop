@@ -157,6 +157,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 HorizontalList2(),
+                const SizedBox(height: 20.0),
                 // HorizontalList3(),
                 Container(
                   width: double.infinity,
@@ -169,6 +170,7 @@ class _HomePageState extends State<HomePage> {
                         subTitle: 'Pesananmu di antar',
                         imageUrl: 'assets/images/slider3_1.png',
                       ),
+                      const SizedBox(width: 10.0),
                       Features(
                         title: 'Ambil',
                         subTitle: 'Datang ambil ke toko',

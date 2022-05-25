@@ -111,7 +111,7 @@ class HorizontalList2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 190.0,
+          height: 170.0,
           // color: Colors.blue,
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
