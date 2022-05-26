@@ -5,10 +5,10 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../models/category_model.dart';
 
-class HorizontalList extends StatelessWidget {
-  HorizontalList({Key? key}) : super(key: key);
+class HorizontalListCopy extends StatelessWidget {
+  HorizontalListCopy({Key? key}) : super(key: key);
 
-  final pageController = PageController(viewportFraction: .9);
+  final pageController = PageController(viewportFraction: 0.8);
 
   List<CategoryModel> categories = [
     CategoryModel(name: 'Technology', imageUrl: 'assets/images/slider1_1.png'),
@@ -20,6 +20,8 @@ class HorizontalList extends StatelessWidget {
   Widget _buildCategories(BuildContext context, category) {
     return Container(
       margin: const EdgeInsets.only(top: 10.0, right: 10.0),
+      width: 300.0,
+      height: 200.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         border: Border.all(
@@ -30,7 +32,8 @@ class HorizontalList extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: double.infinity,
+            width: double.infinity,
+            height: 200.0,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(
@@ -49,35 +52,37 @@ class HorizontalList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          width: 400.0,
-          height: 190.0,
-          child: PageView.builder(
-            controller: pageController,
-            physics: BouncingScrollPhysics(),
-            scrollDirection: Axis.horizontal,
-            itemCount: categories.length,
-            itemBuilder: (context, index) {
-              final category = categories[index];
-              return _buildCategories(context, category);
-            },
-          ),
-        ),
-        const SizedBox(height: 20.0),
-        Padding(
-          padding: const EdgeInsets.only(left: 40.0),
-          child: SmoothPageIndicator(
-            controller: pageController,
-            count: categories.length,
-            effect: SlideEffect(
-              dotWidth: 10.0,
-              dotHeight: 10.0,
-              dotColor: Colors.grey,
-              activeDotColor: Colors.red.shade900,
-              radius: 20.0,
-              spacing: 5,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 150.0,
+              // color: Colors.blue,
+              child: ListView.builder(
+                controller: pageController,
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemCount: categories.length,
+                itemBuilder: (context, index) {
+                  final category = categories[index];
+                  return _buildCategories(context, category);
+                },
+              ),
             ),
-          ),
+            const SizedBox(height: 20.0),
+            SmoothPageIndicator(
+              controller: pageController,
+              count: categories.length,
+              effect: SlideEffect(
+                dotWidth: 10.0,
+                dotHeight: 10.0,
+                dotColor: Colors.grey,
+                activeDotColor: Colors.red.shade900,
+                radius: 20.0,
+                spacing: 5,
+              ),
+            ),
+          ],
         ),
       ],
     );

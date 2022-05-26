@@ -23,7 +23,7 @@ class HorizontalList2 extends StatelessWidget {
     ),
     PopulerModel(
       imageUrl: 'assets/images/supreme.png',
-      title: 'Tshirt Chicago Bulls',
+      title: 'Supreme Cash Gun',
       price: 'Rp. 1.150.000',
       discPrice: 'Rp. 50.000',
     ),
