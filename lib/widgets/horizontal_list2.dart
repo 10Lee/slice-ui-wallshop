@@ -10,6 +10,11 @@ class HorizontalList2 extends StatelessWidget {
 
   List<PopulerModel> popularList = [
     PopulerModel(
+        imageUrl: 'imageUrl',
+        title: 'title',
+        price: 'price',
+        discPrice: 'discPrice'),
+    PopulerModel(
       imageUrl: 'assets/images/tshirt.png',
       title: 'Tshirt Chicago Bulls',
       price: 'Rp. 79.000',
@@ -50,8 +55,7 @@ class HorizontalList2 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: double.infinity,
-            height: 80,
+            height: 80.0,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15), topRight: Radius.circular(15)),
@@ -112,13 +116,18 @@ class HorizontalList2 extends StatelessWidget {
       children: [
         Container(
           height: 170.0,
-          // color: Colors.blue,
+          width: 400.0,
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemCount: popularList.length,
             itemBuilder: (context, index) {
               final populer = popularList[index];
+              if (index == 0) {
+                return const SizedBox(
+                  width: 20.0,
+                );
+              }
               return _buildPopuler(context, populer);
             },
           ),
