@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     // HorizontalList2(),
-                    const SizedBox(height: 180.0),
+                    const SizedBox(height: 200.0),
                     Container(
                       width: double.infinity,
                       height: 120.0,
@@ -165,7 +165,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 40.0),
                   ],
                 ),
               ),

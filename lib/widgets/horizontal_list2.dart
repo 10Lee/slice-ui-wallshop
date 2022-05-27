@@ -55,6 +55,7 @@ class HorizontalList2 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            width: double.infinity,
             height: 80.0,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
