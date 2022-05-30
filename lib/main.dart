@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'screens/master_page.dart';
+import 'pages/master_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: ThemeData.light(),
       home: MasterPage(),
     );
   }
